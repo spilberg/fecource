@@ -2,11 +2,10 @@ body {
     font-family: sans-serif;
     font-size: 12px;
     color: #A4A4A4;
-
 }
 
 .background {
-    background: url("../images/htmlemail.png") no-repeat;
+    /*background: url("../images/htmlemail.png") no-repeat;*/
     border: 1px solid #D9D9D9;
     width: 549px;
     margin-left: 10px;
@@ -42,18 +41,12 @@ header {
 article{
     width: 488px;
     display: inline-block;
-    /* border: 1px solid #ff0000; */
     margin-left: 30px;
     margin-top: 6px;
 }
 
 article>p{
-    /* border: 1px solid #ff0000; */
-    /* margin-left: 30px; */
-    /* margin-top: 7px; */
     line-height: 18px;
-    /* margin: 3px 0; */
-    /* padding: 0px; */
     margin-bottom: 18px;
 }
 
@@ -61,38 +54,43 @@ footer{
     border-top: 1px solid #D9D9D9;
     margin-left: 30px;
     width: 488px;
-    margin-top: 4px;
-    padding-top: 8px;
-    margin-bottom: 21px;
-    /*background: url("../images/sprite0.png") no-repeat;*/
+    margin-top: 1px;
+    padding-top: 12px;
+    margin-bottom: 13px;
 }
 
 footer>p{
-    color: red;
-    /* line-height: 6px; */
+    color: #A4A4A4;
     margin: 5px 0px;
+    font-size: 11px;
 }
 
-/*.logo {*/
-    /*background: url("../images/sprite0.png") 0 0;*/
+.logo {
+    background: url("../images/sprite0.png") no-repeat;
+    background-position: 110% -37%;
+    padding-bottom: 1px;
+}
 
-/*}*/
-
-/*.date{*/
-    /*background: url("../images/sprite0.png") 0 0;*/
-
-/*}*/
-
-.email{
+.date{
+    height: 20px;
+    float: left;
     background-image: url("../images/sprite0.png");
     background-repeat: no-repeat;
-    background-position: -60px 0px;
+    background-position: -41px 5px;
+    width: 13px;
+    margin-right: 2px;
 }
 
-p.icon-email:before{
-    display: block;
+.email{
+    height: 20px;
+    float: left;
     background-image: url("../images/sprite0.png");
-    background-position: 0px 0px;
-    width: 32px;
-    height: 32px;
+    background-repeat: no-repeat;
+    background-position: -61px 0px;
+    width: 13px;
+    margin-right: 2px;
+}
+
+footer a{
+    color: #21759B;
 }
