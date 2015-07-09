@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru-RU">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,173 @@
     <![endif]-->
 </head>
 <body>
-<h1>Hello, world!</h1>
+
+
+<nav class="navbar navbar-default">
+    <p class="navbar-text navbar-left">Домашнее задание. Часть 3</p>
+</nav>
+
+
+
+<div class="container">
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Пример формы</div>
+    <div class="panel-body">
+
+
+<form class="form-horizontal">
+
+<div class="row">
+    <div class="col-sm-6">
+        <fieldset>
+                <legend>Основные сведения</legend>
+            <div class="form-group">
+                <label for="inputFio" class="col-sm-4 control-label">ФИО</label> <span class="glyphicon glyphicon-asterisk"></span>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputFio" placeholder="ФИО">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputLogin" class="col-sm-4 control-label">Логин</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputLogin" placeholder="Логин">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPass" class="col-sm-4 control-label">Пароль</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" id="inputPass" placeholder="Пароль">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPass1" class="col-sm-4 control-label">Подтверждение пароля</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" id="inputPass1" placeholder="Подтверждение пароля">
+                    <p class="help-block">Ведите пароль еще раз.</p>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputDate" class="col-sm-4 control-label">Дата рождения</label>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" id="inputDate" placeholder="Дата рождения">
+                </div>
+            </div>
+            <!--  ФИО*
+
+            область - select
+            улица
+            номер дома
+            ваши увлечения(спорт, музыка, велепрогулки….) - группа чекбоксов
+            откуда вы о нас узнали - datalist/combobox element
+            -->
+        </fieldset>
+    </div>
+    <div class="col-sm-6">
+        <fieldset>
+            <legend>Адрес</legend>
+
+            <div class="form-group">
+                <label for="inputCity" class="col-sm-4 control-label">Город</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Город">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPostcode" class="col-sm-4 control-label">Индекс</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputPostcode" placeholder="Индекс">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="inputArea" class="col-sm-4 control-label">Область</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputArea" placeholder="Область">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputStreet" class="col-sm-4 control-label">Улица</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputStreet" placeholder="Улица">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputBilding" class="col-sm-4 control-label">Номер дома</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="inputBilding" placeholder="Номер дома">
+                </div>
+            </div>
+
+
+        </fieldset>
+
+    </div>
+
+</div>
+    <div class="row">
+        <div class="col-sm-6">
+            <fieldset>
+                <legend>Дополнительные сведения</legend>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">откуда вы о нас узнали</label>
+                    <div class="col-sm-6">
+                        <input list="character" class="form-control">
+                        <datalist id="character">
+                            <option value="От друзей"></option>
+                            <option value="Из газет"></option>
+                            <option value="Из интернета"></option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Ваши увлечения</label>
+                    <div class="col-sm-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="Checkbox1" value="Спорт">Спорт
+                            </label>
+                            <label>
+                                <input type="checkbox" id="Checkbox2" value="Музыка">Музыка
+                            </label>
+                            <label>
+                                <input type="checkbox" id="Checkbox3" value="Велопрогулки">Велопрогулки
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </fieldset>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-10 col-sm-2">
+            <button type="submit" class="btn btn-default">Отправить форму</button>
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
