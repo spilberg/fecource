@@ -7,7 +7,7 @@
     <title>Form Part 3</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,172 +15,196 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        /*.required:after{*/
+            /*content:"*";*/
+            /*display: block;*/
+            /*height: 10px;*/
+            /*width: 10px;*/
+        /*}*/
+
+        /*.red{*/
+            /*color: darkred;*/
+        /*}*/
+    </style>
 </head>
 <body>
 
-
 <nav class="navbar navbar-default">
-    <p class="navbar-text navbar-left">Домашнее задание. Часть 3</p>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="http://dio-soft.org/junior-frontend-developer">Junior Front-End Developer</a>
+        <p class="navbar-text navbar-left">Домашнее задание. Часть 3</p>
+    </div>
 </nav>
 
-
-
 <div class="container">
-
-<div class="panel panel-primary">
-    <div class="panel-heading">Пример формы</div>
-    <div class="panel-body">
-
-
-<form class="form-horizontal">
-
-<div class="row">
-    <div class="col-sm-6">
-        <fieldset>
-                <legend>Основные сведения</legend>
-            <div class="form-group">
-                <label for="inputFio" class="col-sm-4 control-label">ФИО</label> <span class="glyphicon glyphicon-asterisk"></span>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputFio" placeholder="ФИО">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputLogin" class="col-sm-4 control-label">Логин</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputLogin" placeholder="Логин">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPass" class="col-sm-4 control-label">Пароль</label>
-                <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPass" placeholder="Пароль">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPass1" class="col-sm-4 control-label">Подтверждение пароля</label>
-                <div class="col-sm-6">
-                    <input type="password" class="form-control" id="inputPass1" placeholder="Подтверждение пароля">
-                    <p class="help-block">Ведите пароль еще раз.</p>
-                </div>
-
-            </div>
-
-            <div class="form-group">
-                <label for="inputEmail" class="col-sm-4 control-label">Email</label>
-                <div class="col-sm-6">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="inputDate" class="col-sm-4 control-label">Дата рождения</label>
-                <div class="col-sm-6">
-                    <input type="date" class="form-control" id="inputDate" placeholder="Дата рождения">
-                </div>
-            </div>
-            <!--  ФИО*
-
-            область - select
-            улица
-            номер дома
-            ваши увлечения(спорт, музыка, велепрогулки….) - группа чекбоксов
-            откуда вы о нас узнали - datalist/combobox element
-            -->
-        </fieldset>
-    </div>
-    <div class="col-sm-6">
-        <fieldset>
-            <legend>Адрес</legend>
-
-            <div class="form-group">
-                <label for="inputCity" class="col-sm-4 control-label">Город</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputCity" placeholder="Город">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="inputPostcode" class="col-sm-4 control-label">Индекс</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputPostcode" placeholder="Индекс">
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="inputArea" class="col-sm-4 control-label">Область</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputArea" placeholder="Область">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="inputStreet" class="col-sm-4 control-label">Улица</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputStreet" placeholder="Улица">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="inputBilding" class="col-sm-4 control-label">Номер дома</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputBilding" placeholder="Номер дома">
-                </div>
-            </div>
-
-
-        </fieldset>
-
-    </div>
-
-</div>
-    <div class="row">
-        <div class="col-sm-6">
-            <fieldset>
-                <legend>Дополнительные сведения</legend>
-
-
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">откуда вы о нас узнали</label>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Пример формы</div>
+        <div class="panel-body">
+            <form class="form-horizontal" action="/">
+                <div class="row">
                     <div class="col-sm-6">
-                        <input list="character" class="form-control">
-                        <datalist id="character">
-                            <option value="От друзей"></option>
-                            <option value="Из газет"></option>
-                            <option value="Из интернета"></option>
-                        </datalist>
+                        <fieldset>
+                            <legend>Основные сведения</legend>
+                            <div class="form-group">
+                                <label for="inputFio" class="col-sm-4 control-label">ФИО</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="text" class="form-control required" id="inputFio" name="inputFio" placeholder="ФИО">
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="inputLogin" class="col-sm-4 control-label">Логин</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="text" class="form-control" id="inputLogin" name="inputLogin" placeholder="Логин">
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPass" class="col-sm-4 control-label">Пароль</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="password" class="form-control" id="inputPass" name="inputPass" placeholder="Пароль">
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPass1" class="col-sm-4 control-label">Подтверждение пароля</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="password" class="form-control" id="inputPass1" name="inputPass1" placeholder="Подтверждение пароля">
+                                    <p class="help-block">Ведите пароль еще раз.</p>
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email">
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputDate" class="col-sm-4 control-label">Дата рождения</label>
+                                <div class="col-sm-6">
+                                    <input type="date" class="form-control" id="inputDate" name="inputDate" placeholder="Дата рождения">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Адрес</legend>
+
+                            <div class="form-group">
+                                <label for="inputCity" class="col-sm-4 control-label">Город</label>
+                                <div class="col-sm-6">
+                                    <input required="true" type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Город">
+                                </div>
+                                <span class="glyphicon glyphicon-asterisk text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPostcode" class="col-sm-4 control-label">Индекс</label>
+                                <div class="col-sm-6">
+                                    <input type="" class="form-control" id="inputPostcode" name="inputPostcode" placeholder="Индекс">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputRegion" class="col-sm-4 control-label">Область</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" name="inputRegion" id="inputRegion">
+                                        <option value="0">Выберите область</option>
+                                        <option value="1">Винницкая область</option>
+                                        <option value="2">Волынская область</option>
+                                        <option value="3">Днепропетровская область</option>
+                                        <option value="4">Донецкая область</option>
+                                        <option value="5">Житомирская область</option>
+                                        <option value="6">Закарпатская область</option>
+                                        <option value="7">Запорожская область</option>
+                                        <option value="8">Ивано-Франковская область</option>
+                                        <option value="9">Киевская область</option>
+                                        <option value="10">Кировоградская область</option>
+                                        <option value="11">Крым</option>
+                                        <option value="12">Луганская область</option>
+                                        <option value="13">Львовская область</option>
+                                        <option value="14">Николаевская область</option>
+                                        <option value="15">Одесская область</option>
+                                        <option value="16">Полтавская область</option>
+                                        <option value="17">Ровенская область</option>
+                                        <option value="18">Сумская область</option>
+                                        <option value="19">Тернопольская область</option>
+                                        <option value="20">Харьковская область</option>
+                                        <option value="21">Херсонская область</option>
+                                        <option value="22">Хмельницкая область</option>
+                                        <option value="23">Черкасская область</option>
+                                        <option value="24">Черниговская область</option>
+                                        <option value="25">Черновицкая область</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputStreet" class="col-sm-4 control-label">Улица</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="inputStreet" name="inputStreet" placeholder="Улица">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputBuilding" class="col-sm-4 control-label">Номер дома</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="inputBuilding" id="inputBuilding" placeholder="Номер дома">
+                                </div>
+                            </div>
+
+                    </fieldset>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="col-sm-4 control-label">Ваши увлечения</label>
+                <div class="row">
                     <div class="col-sm-6">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="Checkbox1" value="Спорт">Спорт
-                            </label>
-                            <label>
-                                <input type="checkbox" id="Checkbox2" value="Музыка">Музыка
-                            </label>
-                            <label>
-                                <input type="checkbox" id="Checkbox3" value="Велопрогулки">Велопрогулки
-                            </label>
-                        </div>
+                        <fieldset>
+                            <legend>Дополнительные сведения</legend>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">откуда вы о нас узнали</label>
+                                <div class="col-sm-6">
+                                    <input list="character" class="form-control" name="inputWherefrom" id="inputWherefrom">
+                                    <datalist id="character">
+                                        <option value="От друзей"></option>
+                                        <option value="Из газет"></option>
+                                        <option value="Из интернета"></option>
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Ваши увлечения</label>
+                                <div class="col-sm-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="Checkbox" name="Checkbox[]" value="Спорт">Спорт
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox" name="Checkbox[]" value="Музыка">Музыка
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="Checkbox" name="Checkbox[]" value="Велопрогулки">Велопрогулки
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
-
-
-            </fieldset>
-        </div>
-
-
-    </div>
-    <div class="row">
-        <div class="col-sm-offset-10 col-sm-2">
-            <button type="submit" class="btn btn-default">Отправить форму</button>
-        </div>
-    </div>
-</form>
+                <div class="row">
+                    <div class="col-sm-offset-9 col-sm-2">
+                        <button type="submit" class="btn btn-default">Отправить форму</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -188,6 +212,6 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
