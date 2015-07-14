@@ -57,6 +57,26 @@
         }
 
 
+        @media (max-width: 1200px) {
+            .mainmenu {
+                position: inherit;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .mainmenu{
+                position: inherit;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mainmenu{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
 
 
     </style>
@@ -65,19 +85,15 @@
 </head>
 <body>
 
-
-
 <div class="container">
     <div class="container">
-        <div class="main">
-
+        <header>
             <div class="row">
-                <!---->
                 <div class="col-sm-2">
                     <div class="panel panel-default gray">
-                        <div class="panel-body">
-                            Panel 1
-                        </div>
+                    <div class="panel-body">
+                        Panel 1
+                    </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -98,29 +114,21 @@
                         </div>
                     </div>
                 </div>
-                <!---->
-                <!--<div class="col-sm-2 panel">-->
-                    <!--<ul class="nav nav-stacked gray">-->
-                        <!--<li class="active"><a href="#">Home</a></li>-->
-                        <!--<li><a href="#">Menu 1</a></li>-->
-                        <!--<li><a href="#">Menu 2</a></li>-->
-                        <!--<li><a href="#">Menu 3</a></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
+            </div>
+        </header>
 
-                <div class="col-sm-2">
-                    <div class="panel panel-default gray">
-                        <div class="panel-body">
-                            <ul class="nav nav-stacked gray">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Menu 1</a></li>
-                            <li><a href="#">Menu 2</a></li>
-                            <li><a href="#">Menu 3</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+        <div class="main">
+            <div class="row">
+                <div class="col-sm-2 panel">
+                    <ul class="nav nav-stacked gray">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                        <li><a href="#">Menu 3</a></li>
+                    </ul>
+
                 </div>
-
                 <div class="col-sm-10">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
