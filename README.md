@@ -1,1 +1,1 @@
-# fecource
+# fe-course
