@@ -1,0 +1,36 @@
+.gray{
+    background-color: gray;
+    color: #f5f5f5;
+}
+
+.gray>li>a{
+    color: #f5f5f5;
+}
+
+.gray>li.active {
+    background-color: #222222;
+}
+
+.gray>li>a:hover{
+    background-color: #777777;
+}
+
+.gray>li>a:focus{
+    background-color: #777777;
+}
+
+.lightgray{
+    background-color: lightgray;
+}
+
+header{
+    border-bottom: 1px solid gray;
+    margin: 20px 0;;
+}
+
+footer{
+    border-top: 1px solid gray;
+    padding-top: 20px;
+    margin: 20px 0;
+
+}

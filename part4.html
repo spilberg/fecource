@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,94 +17,27 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style type="text/css">
-        /*div{border: 1px solid #ff0000;}*/
-        .gray{
-            background-color: gray;
-            color: #f5f5f5;
-        }
-
-        .gray>li>a{
-            color: #f5f5f5;
-        }
-
-        .gray>li.active {
-            background-color: #222222;
-        }
-
-        .gray>li>a:hover{
-            background-color: #777777;
-        }
-
-        .gray>li>a:focus{
-            background-color: #777777;
-        }
-
-        .lightgray{
-            background-color: lightgray;
-
-        }
-
-        header{
-            border-bottom: 1px solid gray;
-            margin: 20px 0;;
-        }
-
-        footer{
-            border-top: 1px solid gray;
-            padding-top: 20px;
-            margin: 20px 0;
-
-        }
-
-
-        @media (max-width: 1200px) {
-            .mainmenu {
-                position: inherit;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .mainmenu{
-                position: inherit;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mainmenu{
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-
-
-
-    </style>
-
-
 </head>
 <body>
 
-<div class="container">
     <div class="container">
         <header>
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-12 col-md-2">
                     <div class="panel panel-default gray">
                     <div class="panel-body">
-                        Panel 1
+                        <span class="badge">1</span>
                     </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="panel panel-default gray">
                         <div class="panel-body">
-                            Panel 2
+                            <span class="badge">2</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="panel panel-default gray">
                         <div class="panel-body text-right">
                             <address>
@@ -120,97 +54,116 @@
 
         <div class="main">
             <div class="row">
-                <div class="col-sm-2 panel">
+                <div class="col-sm-12 col-md-2 panel">
                     <ul class="nav nav-stacked gray">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Menu 1</a></li>
-                        <li><a href="#">Menu 2</a></li>
-                        <li><a href="#">Menu 3</a></li>
+                        <li class="active"><a href="#">Создание сайтов</a></li>
+                        <li><a href="#">Сайты под ключ</a></li>
+                        <li><a href="#">Как мы работаем</a></li>
+                        <li><a href="#">Интеграция с 1С</a></li>
+                        <li><a href="#">Поддержка сайтов</a></li>
+                        <li><a href="#">Сайты на Битрикс</a></li>
+                        <li><a href="#">Модули Битрикс</a></li>
+                        <li><a href="#">Купить Битрикс</a></li>
+                        <li><a href="#">Дизайн сайтов</a></li>
+                        <li><a href="#">Редизайн сайтов</a></li>
+                        <li><a href="#">Интернет магазины</a></li>
+                        <li><a href="#">Создание логотипов</a></li>
                     </ul>
 
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-12 col-md-10">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 5
+                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
+                            <p>Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.
+                                Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
+                                безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени
+                                Lorem ipsum решила выйти в большой мир грамматики.</p>
+                            <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
+                                запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв,
+                                подпоясал инициал за пояс и пустился в дорогу.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-offset-0 col-sm-2 container-fluid">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                     <div class="panel-body">
-                        Panel 6
+                        <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                     </div>
                 </div>
                 </div>
                 <div class="col-sm-offset-0 col-sm-2">
                     <div class="panel panel-default lightgray">
                     <div class="panel-body">
-                        Panel 6
+                        <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                     </div>
                 </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 6
+                            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="col-sm-2 hidden-sm">
-                    <div class="panel panel-default lightgray">
+                <div class="col-md-2 hidden-xs hidden-sm">
+                    <div class="panel panel-default gray">
                         <div class="panel-body">
-                            Panel 7
+                            <span class="badge">7</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-5">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 8
+
+                            <p><span class="badge">8</span> Студия &laquo;Вася Пупкин&raquo; разработает полнофункциональный продукт ориентированный
+                                на целевую аудиторию и эффективно решающий перед ним маркетинговые задачи. Опыт работ и
+                                использование собственной технологий позволяет предлагать услугу изготовления сайтов.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-5">
                     <div class="panel panel-default lightgray">
                         <div class="panel-body">
-                            Panel 9
+                            <p><span class="badge">9</span> Поисковое продвижение (раскрутка) ведется по комерческим запросам, что позволяет многократно
+                               увеличить количество продаж с сайта даже при небольшом бюджете.</p>
                         </div>
                     </div>
 
@@ -219,24 +172,48 @@
         </div>
         <footer>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="panel panel-default gray">
                         <div class="panel-body">
-                            Panel 10
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>Пункт 01</li>
+                                        <li>Пункт 02</li>
+                                        <li>Пункт 03</li>
+                                        <li>Пункт 04</li>
+                                        <li>Пункт 05</li>
+                                        <li>Пункт 06</li>
+                                        <li>Пункт 07</li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>Пункт 08</li>
+                                        <li>Пункт 09</li>
+                                        <li>Пункт 10</li>
+                                        <li>Пункт 11</li>
+                                        <li>Пункт 12</li>
+                                        <li>Пункт 13</li>
+                                        <li>Пункт 14</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="panel panel-default gray">
                         <div class="panel-body">
-                            <ul>
-                                <li>Поисковое продвижение сайтов</li>
-                                <li>Тариф &laquo;Старт&raquo;</li>
-                                <li>Тариф &laquo;Продвижение плюс&raquo;</li>
-                                <li>Тариф &laquo;Интернет магазин&raquo;</li>
-                                <li>Тариф &laquo;Эксклюзив&raquo;</li>
-                                <li>Тариф &laquo;Контекст + SEO&raquo;</li>
-                                <li>Тариф &laquo;Регион&raquo;</li>
+                            <ul class="nav-stacked gray">
+                                <li><a href="">Поисковое продвижение сайтов</a></li>
+                                <li><a href="">Тариф &laquo;Старт&raquo;</a></li>
+                                <li><a href="">Тариф &laquo;Продвижение плюс&raquo;</a></li>
+                                <li><a href="">Тариф &laquo;Интернет магазин&raquo;</a></li>
+                                <li><a href="">Тариф &laquo;Эксклюзив&raquo;</a></li>
+                                <li><a href="">Тариф &laquo;Контекст + SEO&raquo;</a></li>
+                                <li><a href="">Тариф &laquo;Регион&raquo;</a></li>
                             </ul>
                         </div>
                     </div>
@@ -245,12 +222,12 @@
                 </div>
                 <!--<div class="col-sm-4 gray">12-13</div>-->
 
-                <div class="col-sm-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="panel panel-default gray">
                                 <div class="panel-body">
-                                    Panel 12
+                                    <span class="badge">12</span>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +236,7 @@
                         <div class="col-sm-12">
                             <div class="panel panel-default gray">
                                 <div class="panel-body">
-                                    Panel 13
+                                    <span class="badge">13</span>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +245,7 @@
             </div>
         </footer>
     </div>
-</div>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
