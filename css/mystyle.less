@@ -8,19 +8,21 @@
 .gray {
   background-color: @color-gray;
   color: @color-white;
-  >li.active{
-    background-color: @color-dark;
-  }
 
-  >li{
+  li{
+    &.active {
+      background-color: @color-dark; 
+    }
 
-    >a{
+    a {
       color: @color-white;
+
+      &:hover, &:focus {
+        background-color: @color-dark-blue;
+      }
     }
 
-    >a:hover, >a:focus{
-      background-color: @color-dark-blue;
-    }
+    
   }
 }
 
