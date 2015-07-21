@@ -7,7 +7,15 @@
     
     <script type="text/javascript">
         $(document).ready(function(){
-          // your code shold be placed here  
+          // your code shold be placed here
+          //1. Отобразить скрытый контент из элемента .hidden в элементе .container-main вместо надписи - <p>Please wait. Loading...</p>
+            $('.container-main').html($('.hidden').html());
+            $('.hidden').remove();
+          //2. Отобразить элементы меню в верхней части ( header) в обратном порядке
+          $('header>nav>ul').html($('header>nav>ul>li').get().reverse());
+
+//            var myli = $('footer nav ul li');
+
         })
     </script>
 
