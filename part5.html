@@ -14,7 +14,31 @@
           //2. Отобразить элементы меню в верхней части ( header) в обратном порядке
           $('header>nav>ul').html($('header>nav>ul>li').get().reverse());
 
-//            var myli = $('footer nav ul li');
+//            3. В нижней части - footer к кадому элементу меню в span добавить его обратный индекс/ Например:
+//            В исходном варианте
+//            <li><a href="#1"><span></span>Lorem ipsum.</a></li>
+//            <li><a href="#2"><span></span>Fuga, facere.</a></li>
+//            ....
+//            требуемый результат
+//            <li><a href="#1"><span>#7</span>Lorem ipsum.</a></li>
+//            <li><a href="#2"><span>#6</span>Fuga, facere.</a></li>
+//            ....
+//            Даный метод должен работать при любом количестве элементов в меню
+
+
+//          можно сделать через переменную а можно просто выбрать нужный селектор
+          // var myli = $('footer nav ul li');
+
+            var count = $('footer nav ul li').size();
+//            var count = myli.size();
+
+            $('footer nav ul li').each(function( index, element ) {
+//            myli.each(function( index, element ) {
+
+                $(element).children(0).children(0).text('#'+count);
+                count--;
+
+            });
 
         })
     </script>
@@ -40,6 +64,7 @@
         li {
             list-style: none;
             display: inline-block;
+            margin: 0 3px;
         }
         
         header {
