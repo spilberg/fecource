@@ -3,51 +3,75 @@
 <head lang="ru">
     <meta charset="UTF-8">
     <title>Part 6</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 
     <script type="text/javascript">
-        $(document).ready(function(){
 
-
-        });
-
-        function createArrays(){
-
+        // честно стырил
+        function fib(n) {
+            return function(n,a,b) {
+                return n>0 ? arguments.callee(n-1,b,a+b) : a;
+            }(n,0,1);
         }
 
-
         function compare(a, b){
-
+            var bigger = '';
             if(Array.isArray(a) && Array.isArray(b)) {                          //массивы ли это
                 if (a.length == b.length){                                      //одинаковые по длине?
                     if(JSON.stringify(a) == JSON.stringify(b)) return true;
                 } else {
-
+                    if(summa(a) === summa(b)){
+                        return '{result:false, bigger:['+ bigger +']}';
+                    } else if (summa(a) > summa(b)){
+                        bigger = (a.sort()).toString();
+                    } else {
+                        bigger = (b.sort()).toString();
+                    }
+                    return '{result:false, bigger:['+ bigger +']}';
                 }
             }
             return false;
-
         }
 
-//        function arraysEqual(a, b) {
-//            if (a === b) return true;
-//            if (a == null || b == null) return false;
-//            if (a.length != b.length) return false;
-//
-//            // If you don't care about the order of the elements inside
-//            // the array, you should sort both arrays here.
-//
-//            for (var i = 0; i < a.length; ++i) {
-//                if (a[i] !== b[i]) return false;
-//            }
-//            return true;
-//        }
-
+        function summa(a){
+            var sum = 0;
+            for( var i = 0; i < a.length; i++ ){
+                sum += parseInt( a[i], 10 );
+            }
+            return sum;
+        }
 
     </script>
 
 </head>
 <body>
-Part_6
+
+
+<h2>Part_6</h2>
+
+
+<h3>The compare() function.</h3>
+
+<button onclick="onclickFunction(compare([7,2], [7,2]))">compare([7,2], [7,2])</button>
+<button onclick="onclickFunction(compare([3,1,4], [8]))">compare([3,1,4], [8])</button>
+<button onclick="onclickFunction(compare([3,1,4], [8,2]))">compare([3,1,4], [8,2])</button>
+<p>Result of Compare function: <input type="text" value="" id="result"/></p>
+
+
+<h3>Fibonachi</h3>
+<p>Input argument: <input type="text" id="fibargument" value=""> &nbsp; <button onclick="onclickFibonachi(document.getElementById('fibargument').value)">Get fibonachi</button></p>
+<p>Result: <input type="text" id="fibresult" value=""/></p>
+
+
+<script>
+    function onclickFunction(f) {
+        document.getElementById("result").value = f;
+    }
+
+    function onclickFibonachi(a){
+        document.getElementById('fibresult').value = fib(a);
+    }
+</script>
+
 </body>
 </html>
