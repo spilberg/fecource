@@ -23,9 +23,9 @@
                     if(summa(a) === summa(b)){
                         return '{result:false, bigger:['+ bigger +']}';
                     } else if (summa(a) > summa(b)){
-                        bigger = (a.sort()).toString();
+                        bigger = (a.sort(compareNumeric)).toString();
                     } else {
-                        bigger = (b.sort()).toString();
+                        bigger = (b.sort(compareNumeric)).toString();
                     }
                     return '{result:false, bigger:['+ bigger +']}';
                 }
@@ -39,6 +39,11 @@
                 sum += parseInt( a[i], 10 );
             }
             return sum;
+        }
+
+        function compareNumeric(a, b) {
+            if (a > b) return 1;
+            if (a < b) return -1;
         }
 
     </script>
