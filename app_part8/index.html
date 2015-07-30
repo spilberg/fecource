@@ -13,13 +13,86 @@
                 $.each($("input:not(:checkbox)"), function(k,v){
                     v.name = v.id;
                 });
+
+                getUserData();
+
+                $("form").submit(function(ev){
+                    submitAjaxGet($("form").serialize());
+                    submitAjaxPost($("form").serialize());
+                    ev.preventDefault();
+                });
+
             });
+
+            function getUserData(){
+                $.ajax({
+                    url: 'https://randomuser.me/api/',
+                    dataType: 'json',
+                    success: function(data){
+                        fillFields(data.results[0].user);
+                    }
+                });
+            }
+
+            function fillFields(userObj){
+                // тут далее не совсем правильное решение поскольку в задаче сказано
+                // "Из полученных данных динамически отобрать те, ключи которых совпадают с полями формы и заполнить ими форму."
+                // таким образом не будет заполнено полея name, email1, email2, и т.д.
+                // поэтому выбираю тупо то что мне надо зная где оно лежит в полученом объекте
+
+                $('#name').val(userObj.name.first + ' ' + userObj.name.last);
+                $('#login').val(userObj.username);
+                $('#email1, #email2').val(userObj.email);
+                $('#password1, #password2').val(userObj.password);
+
+                $('#city').val(userObj.location.city);
+                $('#street').val(userObj.location.street);
+                $('#zip').val(userObj.location.zip);
+                $( "#state" ).append( $('<option value="' + userObj.location.state + '" selected="selected">'+ userObj.location.state + '</option>') );
+
+            }
+
+            function submitAjaxGet(mydata){
+                $.ajax({
+                   url: "/fecource/index.html",
+                   method: 'GET',
+                   data: mydata,
+                   success: function(data){
+                       $('header').append('<div class="alert alert-success" role="alert">Success! Data sended by GET method</div>');
+                       console.log('success submitAjaxGet');
+                   },
+                   error: function(jqXHR, textStatus, errorMessage) {
+                       $('header').append('<div class="alert alert-danger role="alert">GET method ' + textStatus + ', ' + errorMessage + '</div>');
+                       console.log(errorMessage);
+                   }
+
+                });
+            }
+
+            function submitAjaxPost(mydata){
+                $.ajax({
+                    url: "/fecource/index.html",
+                    method: 'POST',
+                    data: mydata,
+                    success: function(data){
+                        $('header').append('<div class="alert alert-success" role="alert">Success! Data sended by POST method</div>');
+                        console.log('success submitAjaxPost');
+                    },
+                    error: function(jqXHR, textStatus, errorMessage) {
+                        $('header').append('<div class="alert alert-danger role="alert">POST method ' + textStatus + ', ' + errorMessage + '</div>');
+                        console.log(errorMessage);
+                    }
+
+                });
+            }
+
         </script>
 
 	</head>
 	<body>
 		<header class="container">
 			<h1 class="text-center">Registration form</h1>
+            <div></div>
 		</header>
 		<section class="container">
 			<form name="registration" class="form-horizontal" data-toggle="validator">
