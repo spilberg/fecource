@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FE Course Part 9</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+
     <!--<link href="css/mystyle.css" rel="stylesheet">-->
-    <link rel="stylesheet/less" type="text/css" href="css/mystyle.less">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,61 +18,89 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            var navbar = $('#bs-example-navbar-collapse-1');
+
+            // init show or hide menu item or menu button
+            showHide();
+
+            // add event handler for resize
+            $(window).resize(function(){ showHide(); });
+
+            // add menu button and hanler for click
+            $('.navbar-header').append(
+                    $('<a class="navbar-brand" href="#menu">Меню</a>').on('click', function(){ $('#bs-example-navbar').toggle(); })
+            );
+
+            // add menu items
+            var navbar   = $('#bs-example-navbar');
             var navbarUl = $('<ul class="nav navbar-nav"></ul>');
-            navbarUl.append($('<li>item 1</li>'));
+
+            for(var i=1; i < 5; i++)
+            {
+                if(i == 3){
+                    navbarUl.append($('<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu item '+ i +'<span class="caret"></span></a></li>').append(addSubmenu()) );
+                } else {
+                    navbarUl.append($('<li><a href="#">Menu item ' + i + '</a></li>').on('click', function () { myAlert(this); }));
+                }
+            }
             navbar.append(navbarUl);
-        })
+
+        });
+
+
+        // show or hide menu button or menu
+        function showHide(){
+            if($(window).width() < 600){
+                $('.navbar-header').show();
+                $('#bs-example-navbar').hide();
+            } else if ($(window).width() >= 600) {
+                $('.navbar-header').hide();
+                $('#bs-example-navbar').show();
+            }
+        }
+
+        // add submenu
+        function addSubmenu(){
+
+            var navbarSub = $('<ul class="dropdown-menu"></ul>');
+            for(var i=1; i < 5; i++)
+            {
+                navbarSub.append($('<li><a href="#">SubMenu item '+ i +'</a></li>').on('click', function(){myAlert(this);}));
+            }
+
+            return navbarSub;
+        }
+
+        //show alert in article area if click on menu item
+        function myAlert(obj){
+            $('.panel-body').html($('<p>' + obj.children[0].text + '</p>'));
+            showHide();
+        }
     </script>
 
 </head>
 <body>
 <div class="container">
     <header>
-
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Меню</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-header"></div>
 
-                    <!--<ul class="nav navbar-nav">-->
-                        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-                        <!--<li><a href="#">Link</a></li>-->
-                        <!--<li class="dropdown">-->
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                            <!--<ul class="dropdown-menu">-->
-                                <!--<li><a href="#">Action</a></li>-->
-                                <!--<li><a href="#">Another action</a></li>-->
-                                <!--<li><a href="#">Something else here</a></li>-->
-                                <!--<li role="separator" class="divider"></li>-->
-                                <!--<li><a href="#">Separated link</a></li>-->
-                                <!--<li role="separator" class="divider"></li>-->
-                                <!--<li><a href="#">One more separated link</a></li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                    <!--</ul>-->
+                <div class="navbar-collapse" id="bs-example-navbar"></div><!-- /.navbar-collapse -->
 
-                </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
     </header>
+
     <article>
         <div class="panel panel-default">
             <div class="panel-body">
-                Basic panel example
+                <p>If you click any menu item, then you received its text.</p>
             </div>
         </div>
     </article>
 
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
